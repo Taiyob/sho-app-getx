@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:shop_app_getx/testsForworking/forButtonLinkIssues.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -147,6 +148,13 @@ class _LogInScreenState extends State<LogInScreen> {
                                 ],
                               ),
                             ),
+                               ElevatedButton(
+                                child: Text('Elevated Button'),
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ForButtonLink()));
+                                  //ForButtonLink();
+                                },
+                              ),
                           ],
                         ),
                       ),
