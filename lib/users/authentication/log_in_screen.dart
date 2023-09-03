@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:shop_app_getx/testsForworking/forButtonLinkIssues.dart';
+import 'package:shop_app_getx/users/authentication/registration_screen.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -157,7 +158,7 @@ class _LogInScreenState extends State<LogInScreen> {
                                     const Text("Don't have an account?",style: TextStyle(color: Colors.white),),
                                    TextButton(
                                        onPressed: (){
-
+                                        Get.to(const SignUpScreen());
                                        }, child: const Text('Register Here')),
                                  ],
                                ),
