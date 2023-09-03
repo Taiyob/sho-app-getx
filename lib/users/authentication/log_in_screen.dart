@@ -56,6 +56,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         padding: const EdgeInsets.fromLTRB(30,30,30,8),
                         child: Column(
                           children: [
+                            // email password and login button
                             Form(
                               key: formKey,
                               child: Column(
@@ -148,10 +149,34 @@ class _LogInScreenState extends State<LogInScreen> {
                                 ],
                               ),
                             ),
+                            SizedBox(height: 16,),
+                            // don't have an account button
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                    const Text("Don't have an account?",style: TextStyle(color: Colors.white),),
+                                   TextButton(
+                                       onPressed: (){
+
+                                       }, child: const Text('Register Here')),
+                                 ],
+                               ),
+                            const Text('Or',style: TextStyle(color: Colors.white),),
+                            // Only for admin
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Text("Are you an admin?",style: TextStyle(color: Colors.white),),
+                                TextButton(
+                                    onPressed: (){
+
+                                    }, child: const Text('Click Here')),
+                              ],
+                            ),
                                ElevatedButton(
-                                child: Text('Elevated Button'),
+                                child: const Text('Elevated Button'),
                                 onPressed: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ForButtonLink()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const ForButtonLink()));
                                   //ForButtonLink();
                                 },
                               ),
