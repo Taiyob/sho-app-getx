@@ -114,7 +114,49 @@ class _SignUpScreenState extends State<SignUpScreen> {
                              SizedBox(height: 18,),
                              // password
                              Obx(
-                                     () =>
+                                     () => TextFormField(
+                                       controller: passwordController,
+                                       obscureText: isObsecure.value,
+                                       validator: (val)=>val == '' ? 'please give password' : null,
+                                       decoration: InputDecoration(
+                                         prefixIcon: Icon(Icons.vpn_key_sharp,color: Colors.black,),
+                                         suffixIcon: Obx(() => GestureDetector(onTap: ()
+                                         {
+                                          isObsecure.value = !isObsecure.value;
+                                         },child: Icon(isObsecure.value ? Icons.visibility_off : Icons.visibility,color:Colors.black,),
+                                         ),
+                                         ),
+                                         hintText: 'password.....',
+                                         border: OutlineInputBorder(
+                                           borderRadius: BorderRadius.circular(30),
+                                           borderSide: BorderSide(color: Colors.white),
+                                         ),
+                                         enabledBorder: OutlineInputBorder(
+                                           borderRadius: BorderRadius.circular(30),
+                                           borderSide: BorderSide(color: Colors.white),
+                                         ),
+                                         focusedBorder: OutlineInputBorder(
+                                           borderRadius: BorderRadius.circular(30),
+                                           borderSide: BorderSide(color: Colors.white),
+                                         ),
+                                         disabledBorder: OutlineInputBorder(
+                                           borderRadius: BorderRadius.circular(30),
+                                           borderSide: BorderSide(color: Colors.white),
+                                         ),
+                                         contentPadding: EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                         fillColor: Colors.white,
+                                         filled: true,
+                                       ),
+                                     )
+                             ),
+                             SizedBox(height: 18,),
+                             // button
+                             Material(
+                               color: Colors.black,
+                               borderRadius: BorderRadius.circular(30),
+                               child: InkWell(
+                                 
+                               ),
                              ),
                            ],
                          ),
