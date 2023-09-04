@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop_app_getx/users/authentication/log_in_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -36,14 +37,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
              Padding(padding: const EdgeInsets.all(16.0),
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.black,
                     borderRadius: BorderRadius.all(Radius.circular(60),),
                     boxShadow: [BoxShadow(
                       blurRadius: 8,
-                      color: Colors.black,
-                      offset: Offset(0,-3),
-                    ),
-                    ],
+                      color: Colors.white,
+                      offset: Offset(0,10),
+                    ),],
                   ),
                  child: Padding(
                    padding: EdgeInsets.fromLTRB(30, 30, 30, 8),
@@ -152,14 +152,35 @@ class _SignUpScreenState extends State<SignUpScreen> {
                              SizedBox(height: 18,),
                              // button
                              Material(
-                               color: Colors.black,
+                               color: Colors.white,
                                borderRadius: BorderRadius.circular(30),
                                child: InkWell(
-                                 
+                                 onTap: (){},
+                                 borderRadius: BorderRadius.circular(30),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                                    child: Text('sign up',style: TextStyle(color: Colors.black,fontSize: 16),),
+                                  ),
                                ),
                              ),
                            ],
                          ),
+                       ),
+                       SizedBox(height: 16,),
+                       // already have account button
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.center,
+                         children: [
+                           Text('Already have an account?',style: TextStyle(color: Colors.white),),
+                           TextButton(onPressed: (){Get.to(LogInScreen());},
+                             child: Container(
+                                 decoration: BoxDecoration(border: Border.all(color: Colors.white),borderRadius: BorderRadius.all(Radius.circular(20))),
+                                 child: Padding(
+                                   padding: const EdgeInsets.all(8.0),
+                                   child: Text('sign in here',style: TextStyle(color: Colors.white,),),
+                                 )),
+                           ),
+                         ],
                        ),
                      ],
                    ),
