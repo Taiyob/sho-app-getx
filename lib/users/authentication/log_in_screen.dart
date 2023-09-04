@@ -76,9 +76,9 @@ class _LogInScreenState extends State<LogInScreen> {
                                           color: Colors.white60,
                                         ),
                                       ),
-                                      enabledBorder: OutlineInputBorder(),
-                                      focusedBorder: OutlineInputBorder(),
-                                      disabledBorder: OutlineInputBorder(),
+                                      enabledBorder: const OutlineInputBorder(),
+                                      focusedBorder: const OutlineInputBorder(),
+                                      disabledBorder: const OutlineInputBorder(),
                                       contentPadding: const EdgeInsets.symmetric(
                                         horizontal: 14,
                                         vertical: 6,
@@ -115,9 +115,9 @@ class _LogInScreenState extends State<LogInScreen> {
                                                   color: Colors.white60,
                                                 ),
                                               ),
-                                              enabledBorder: OutlineInputBorder(),
-                                              focusedBorder: OutlineInputBorder(),
-                                              disabledBorder: OutlineInputBorder(),
+                                              enabledBorder: const OutlineInputBorder(),
+                                              focusedBorder: const OutlineInputBorder(),
+                                              disabledBorder: const OutlineInputBorder(),
                                               contentPadding: const EdgeInsets.symmetric(
                                                 horizontal: 14,
                                                 vertical: 6,
@@ -150,7 +150,7 @@ class _LogInScreenState extends State<LogInScreen> {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 16,),
+                            const SizedBox(height: 16,),
                             // don't have an account button
                                Row(
                                  mainAxisAlignment: MainAxisAlignment.center,

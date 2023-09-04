@@ -12,7 +12,7 @@ class _ForButtonLinkState extends State<ForButtonLink> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Testing Area'),
+        title: const Text('Testing Area'),
       ),
       body: Center(
         child: Padding(
@@ -20,7 +20,7 @@ class _ForButtonLinkState extends State<ForButtonLink> {
           child: Container(
             height: 250,
             width: 250,
-            margin: EdgeInsets.all(2),
+            margin: const EdgeInsets.all(2),
             decoration: BoxDecoration(
               color: Colors.blueGrey,
               border: Border.all(width: 10),

@@ -46,7 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),],
                   ),
                  child: Padding(
-                   padding: EdgeInsets.fromLTRB(30, 30, 30, 8),
+                   padding: const EdgeInsets.fromLTRB(30, 30, 30, 8),
                    child: Column(
                      children: [
                        // name email password signup-button
@@ -59,59 +59,59 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                controller: nameController,
                                validator: (val) => val == "" ? "Please write your name" : null,
                                decoration: InputDecoration(
-                                 prefixIcon: Icon(Icons.person, color: Colors.black,),
+                                 prefixIcon: const Icon(Icons.person, color: Colors.black,),
                                  hintText: 'name....',
                                  border: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  enabledBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  focusedBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  disabledBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
-                                 contentPadding: EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                 contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                                  fillColor: Colors.white,
                                  filled: true,
                                ),
                              ),
-                             SizedBox(height: 18,),
+                             const SizedBox(height: 18,),
                              // email
                              TextFormField(
                                controller: emailController,
                                validator: (val) => val == "" ? "Please write your email" : null,
                                decoration: InputDecoration(
-                                 prefixIcon: Icon(Icons.email, color: Colors.black,),
+                                 prefixIcon: const Icon(Icons.email, color: Colors.black,),
                                  hintText: 'email....',
                                  border: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  enabledBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  focusedBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
                                  disabledBorder: OutlineInputBorder(
                                    borderRadius: BorderRadius.circular(30),
-                                   borderSide: BorderSide(color: Colors.white),
+                                   borderSide: const BorderSide(color: Colors.white),
                                  ),
-                                 contentPadding: EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                 contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                                  fillColor: Colors.white,
                                  filled: true,
                                ),
                              ),
-                             SizedBox(height: 18,),
+                             const SizedBox(height: 18,),
                              // password
                              Obx(
                                      () => TextFormField(
@@ -119,7 +119,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                        obscureText: isObsecure.value,
                                        validator: (val)=>val == '' ? 'please give password' : null,
                                        decoration: InputDecoration(
-                                         prefixIcon: Icon(Icons.vpn_key_sharp,color: Colors.black,),
+                                         prefixIcon: const Icon(Icons.vpn_key_sharp,color: Colors.black,),
                                          suffixIcon: Obx(() => GestureDetector(onTap: ()
                                          {
                                           isObsecure.value = !isObsecure.value;
@@ -129,27 +129,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                          hintText: 'password.....',
                                          border: OutlineInputBorder(
                                            borderRadius: BorderRadius.circular(30),
-                                           borderSide: BorderSide(color: Colors.white),
+                                           borderSide: const BorderSide(color: Colors.white),
                                          ),
                                          enabledBorder: OutlineInputBorder(
                                            borderRadius: BorderRadius.circular(30),
-                                           borderSide: BorderSide(color: Colors.white),
+                                           borderSide: const BorderSide(color: Colors.white),
                                          ),
                                          focusedBorder: OutlineInputBorder(
                                            borderRadius: BorderRadius.circular(30),
-                                           borderSide: BorderSide(color: Colors.white),
+                                           borderSide: const BorderSide(color: Colors.white),
                                          ),
                                          disabledBorder: OutlineInputBorder(
                                            borderRadius: BorderRadius.circular(30),
-                                           borderSide: BorderSide(color: Colors.white),
+                                           borderSide: const BorderSide(color: Colors.white),
                                          ),
-                                         contentPadding: EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                         contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                                          fillColor: Colors.white,
                                          filled: true,
                                        ),
                                      )
                              ),
-                             SizedBox(height: 18,),
+                             const SizedBox(height: 18,),
                              // button
                              Material(
                                color: Colors.white,
@@ -157,7 +157,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                child: InkWell(
                                  onTap: (){},
                                  borderRadius: BorderRadius.circular(30),
-                                  child: Padding(
+                                  child: const Padding(
                                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                                     child: Text('sign up',style: TextStyle(color: Colors.black,fontSize: 16),),
                                   ),
@@ -166,17 +166,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                            ],
                          ),
                        ),
-                       SizedBox(height: 16,),
+                       const SizedBox(height: 16,),
                        // already have account button
                        Row(
                          mainAxisAlignment: MainAxisAlignment.center,
                          children: [
-                           Text('Already have an account?',style: TextStyle(color: Colors.white),),
-                           TextButton(onPressed: (){Get.to(LogInScreen());},
+                           const Text('Already have an account?',style: TextStyle(color: Colors.white),),
+                           TextButton(onPressed: (){Get.to(const LogInScreen());},
                              child: Container(
                                  decoration: BoxDecoration(border: Border.all(color: Colors.white),borderRadius: BorderRadius.all(Radius.circular(20))),
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(8.0),
+                                 child: const Padding(
+                                   padding: EdgeInsets.all(8.0),
                                    child: Text('sign in here',style: TextStyle(color: Colors.white,),),
                                  )),
                            ),
