@@ -40,7 +40,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: const BoxDecoration(    
                         color: Colors.white24,
                         borderRadius: BorderRadius.all(
                           Radius.circular(60),

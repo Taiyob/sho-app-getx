@@ -1,6 +1,10 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:shop_app_getx/api_connection/api_connection.dart';
 import 'package:shop_app_getx/users/authentication/log_in_screen.dart';
+import 'package:http/http.dart' as http;
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -15,6 +19,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   var isObsecure = true.obs;
+  validateUserEmail()  async
+    {
+      try{
+        var res = await http.post(
+          Uri.parse(API.validateEmail),
+          body: {
+            'user_email' : emailController.text.trim(),
+          }
+        );
+        if(res.statusCode == 200){
+           var resBodyOfValidateEmail = jsonDecode(res.body);
+           if(resBodyOfValidateEmail['emailFound'] == true){
+             Fluttertoast.showToast(msg: 'Email already taken');
+           }else{
+             registerAndSaveUserRecord();
+           }
+        }
+      } catch(e){
+
+      }
+    }
+  registerAndSaveUserRecord() async{
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,7 +183,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                color: Colors.white,
                                borderRadius: BorderRadius.circular(30),
                                child: InkWell(
-                                 onTap: (){},
+                                 onTap: (){
+                                   if(formKey.currentState!.validate()){
+
+                                   }
+                                 },
                                  borderRadius: BorderRadius.circular(30),
                                   child: const Padding(
                                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
